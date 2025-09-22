@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Sample Project Page</title>
+  <meta name="description" content="A sample semantic HTML page with images, list, and external link for class assignment." />
+  <style>
+    /* Minimal styling for readability */
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin: 0; line-height: 1.5; color: #222; }
+    header, main, footer { padding: 1.5rem; max-width: 900px; margin: auto; }
+    header { background: #f5f7fb; border-bottom: 1px solid #e0e6ef; }
+    .gallery { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .gallery img { width: calc(33% - 0.66rem); height: 200px; object-fit: cover; border-radius: 6px; }
+    @media (max-width: 600px) { .gallery img { width: 100%; } }
+    nav a { margin-right: 1rem; color: #0366d6; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    ul { padding-left: 1.25rem; }
+    footer { text-align: center; font-size: 0.9rem; color: #666; border-top: 1px solid #eee; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Sample Project Page</h1>
+    <p>Simple semantic HTML page demonstrating required elements: <strong>doctype, head, body, semantic tags, list, images, external link</strong>.</p>
+    <nav aria-label="Main navigation">
+      <a href="#features">Features</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#references">References</a>
+    </nav>
+  </header>
+
+  <main id="main-content" role="main">
+    <section id="features" aria-labelledby="features-heading">
+      <h2 id="features-heading">What this page includes</h2>
+      <p>Below is a small list of the elements included on this page.</p>
+
+      <!-- At least three item list -->
+      <ul>
+        <li>Semantic structure: header, main, footer, sections.</li>
+        <li>Images: three example photos (Unsplash) with alt text for accessibility.</li>
+        <li>External resource link and accessible navigation.</li>
+      </ul>
+    </section>
+
+    <section id="gallery" aria-labelledby="gallery-heading">
+      <h2 id="gallery-heading">Image Gallery</h2>
+      <p>Three example images (public Unsplash URLs). Each image has descriptive alt text.</p>
+      <div class="gallery" role="list">
+        <img role="listitem" src="https://images.unsplash.com/photo-1516822003754-cca485356ecb?w=1200&auto=format&fit=crop&q=80" alt="Close-up of a laptop keyboard and coffee cup">
+        <img role="listitem" src="https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?w=1200&auto=format&fit=crop&q=80" alt="Wide shot of a calm beach with sunset">
+        <img role="listitem" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&auto=format&fit=crop&q=80" alt="Desktop workspace with notebook and headphones">
+      </div>
+    </section>
+
+    <section id="external" aria-labelledby="external-heading">
+      <h2 id="external-heading">External Resources</h2>
+      <p>Learn more about semantic HTML and accessibility from Mozilla Developer Network:</p>
+      <!-- external link to an authoritative source -->
+      <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN Web Docs — HTML reference</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created for class assignment • <time datetime="2025-09-22">2025-09-22</time></p>
+  </footer>
+</body>
+</html>
